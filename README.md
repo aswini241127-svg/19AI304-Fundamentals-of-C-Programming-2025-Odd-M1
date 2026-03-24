@@ -26,8 +26,23 @@ To build a C program that prints integer, float,character, and string literals o
 ### Step 4: 
    Stop
 # Program:
-<img width="803" height="495" alt="530353360-ac1251f7-63e7-4b11-a622-f127c638a251" src="https://github.com/user-attachments/assets/716f77ed-968c-455e-8b9d-cc9b9a56ae2f" />
+```
+#include <stdio.h>
 
+int main() {
+    int intLiteral = 10;
+    float floatLiteral = 3.14;
+    char charLiteral = 'A';
+    char stringLiteral[] = "Hello C";
+
+    printf("Integer literal: %d, Size: %lu bytes\n", intLiteral, sizeof(intLiteral));
+    printf("Float literal: %f, Size: %lu bytes\n", floatLiteral, sizeof(floatLiteral));
+    printf("Character literal: %c, Size: %lu bytes\n", charLiteral, sizeof(charLiteral));
+    printf("String literal: %s, Size: %lu bytes\n", stringLiteral, sizeof(stringLiteral));
+
+    return 0;
+}
+```
 # Output:
 
  <img width="821" height="363" alt="530353376-e770a197-ec38-4bfc-bc79-7383d53e2c7a" src="https://github.com/user-attachments/assets/85e3fb78-a480-4f90-8126-35d15d348324" />
@@ -62,7 +77,18 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
-<img width="812" height="374" alt="530353563-474b8708-410f-407d-b9bc-79c8220981a5" src="https://github.com/user-attachments/assets/b8afb686-06fb-4243-97dd-f88b11533b2e" />
+```
+#include <stdio.h>
+#define PI 3.14159
+int main() {
+    const int DAYS = 7;
+
+    printf("Value of macro constant PI: %f\n", PI);
+    printf("Value of constant variable DAYS: %d\n", DAYS);
+
+    return 0;
+}
+```
 
 # Output:
 <img width="834" height="340" alt="530353580-71600d94-790b-4aeb-9832-f359ec2b12ea" src="https://github.com/user-attachments/assets/8d12e841-6789-4141-9234-04edf7eb2908" />
@@ -90,8 +116,20 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
-<img width="792" height="361" alt="530353674-cc91bcf7-a1eb-445a-9e15-b1a0191f5de3" src="https://github.com/user-attachments/assets/9bc8dab9-6ff4-4a3b-8670-d2b242c42bff" />
-
+```
+#include <stdio.h>
+int main() {
+    int intVar = 25;
+    float floatVar = 5.75;
+    double doubleVar = 19.99;
+    char charVar = 'G';
+    printf("Integer value: %d\n", intVar);
+    printf("Float value: %f\n", floatVar);
+    printf("Double value: %lf\n", doubleVar);
+    printf("Character value: %c\n", charVar);
+    return 0;
+}
+```
 # Output:
 <img width="820" height="309" alt="530353691-f9cd545a-b9dc-4fd8-9c99-86543039ac4a" src="https://github.com/user-attachments/assets/ae7e3553-7382-4b19-807b-2d3d10f9d8e3" />
 
@@ -134,7 +172,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
-<img width="789" height="604" alt="530353777-659bb56b-ac41-42ea-b0ec-817f77e3c9a1" src="https://github.com/user-attachments/assets/26116dc0-8d6b-46c2-936f-f52b51fbf737" />
+```
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("Arithmetic Operations:\n");
+    printf("Sum (a + b) = %d\n", a + b);
+    printf("Difference (a - b) = %d\n", a - b);
+    printf("Product (a * b) = %d\n", a * b);
+    if(b != 0) {
+        printf("Quotient (a / b) = %d\n", a / b);
+        printf("Remainder (a %% b) = %d\n", a % b);
+    } else {
+        printf("Division by zero is not allowed.\n");
+    }
+    printf("\nBitwise Operations:\n");
+    printf("AND (a & b) = %d\n", a & b);
+    printf("OR (a | b) = %d\n", a | b);
+    printf("XOR (a ^ b) = %d\n", a ^ b);
+    printf("Left shift (a << b) = %d\n", a << b);
+    printf("Right shift (a >> b) = %d\n", a >> b);
+    printf("Bitwise NOT of a (~a) = %d\n", ~a);
+    printf("Bitwise NOT of b (~b) = %d\n", ~b);
+    return 0;
+}
+```
 
 # Output:
 <img width="819" height="564" alt="530353806-c961a8f4-20ba-4cda-bdd8-dcf421a81cdc" src="https://github.com/user-attachments/assets/7f9fe4fd-f55b-46ae-9743-41a919e863db" />
@@ -183,8 +247,19 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
-<img width="793" height="536" alt="530353864-cf80f130-1faf-41e4-9184-aeb98e20c8e8" src="https://github.com/user-attachments/assets/d31f723f-a5da-459b-927f-dd8d1f8991eb" />
-
+```
+#include<stdio.h>
+int main(){
+    char ch;
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+    (ch>='0' && ch<='9')?printf("Digit\n"):
+    ((ch>='A' && ch<='Z')||(ch>='a' && ch<='z'))?
+    ((ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')?printf("Vowel\n"):printf("Consonant\n"))
+    :printf("Special Symbol\n");
+    return 0;
+}
+```
 # Output:
 <img width="820" height="112" alt="530353901-44200bc0-b252-4daa-bc01-07eb4f15c22e" src="https://github.com/user-attachments/assets/dcd9025d-5a13-476c-a23f-397357fd558d" />
 
